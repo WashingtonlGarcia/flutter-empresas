@@ -1,4 +1,4 @@
-![N|Solid](logo_ioasys.png)
+![N|Solid](assets/images/logo_ioasys.png)
 
 # Desafio Pessoa Desenvolvedora Flutter
 
