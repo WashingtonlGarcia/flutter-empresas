@@ -3,12 +3,12 @@ import 'package:flutter/material.dart' show Color;
 import '../../utils/utils.dart' show ColorGenerator;
 import 'deserializable.dart';
 
-class EnterpriseyKey extends DeserializableKey {
+class EnterpriseKey extends DeserializableKey {
   String enterpriseName;
   String photo;
   String description;
 
-  EnterpriseyKey()
+  EnterpriseKey()
       : enterpriseName = 'enterprise_name',
         photo = 'photo',
         description = 'description',
@@ -30,7 +30,7 @@ class Enterprise extends Deserializable {
       : super(id: id);
 
   factory Enterprise.fromMap({required Map<String, Object?> map}) {
-    final EnterpriseyKey key = EnterpriseyKey();
+    final EnterpriseKey key = EnterpriseKey();
     return Enterprise(
         id: map[key.id]! as int,
         enterpriseName: map[key.enterpriseName]! as String,
@@ -41,7 +41,7 @@ class Enterprise extends Deserializable {
 
   @override
   Map<String, Object> toMap() {
-    final EnterpriseyKey key = EnterpriseyKey();
+    final EnterpriseKey key = EnterpriseKey();
     return {
       key.id: id,
       key.description: description,
