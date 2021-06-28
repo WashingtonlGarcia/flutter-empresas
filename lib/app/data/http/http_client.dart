@@ -15,7 +15,7 @@ abstract class HttpClient {
             connectTimeout: 5000,
             contentType: 'application/json'));
 
-  Future<Response> get({Map<String, Object>? query}) async {
+  Future<dynamic> get({Map<String, Object>? query}) async {
     try {
       final Response response = await _dio.get(route, queryParameters: query);
       return response;
@@ -24,7 +24,7 @@ abstract class HttpClient {
     }
   }
 
-  Future<Response> post(
+  Future<dynamic> post(
       {Map<String, Object>? query, Map<String, Object?>? map}) async {
     try {
       final Response response =
@@ -35,7 +35,7 @@ abstract class HttpClient {
     }
   }
 
-  Future<Response> delete(
+  Future<dynamic> delete(
       {Map<String, Object>? query, Map<String, Object?>? map}) async {
     try {
       final Response response =
@@ -46,7 +46,7 @@ abstract class HttpClient {
     }
   }
 
-  Future<Response> path(
+  Future<dynamic> path(
       {Map<String, Object>? query, Map<String, Object?>? map}) async {
     try {
       final Response response =
@@ -57,7 +57,7 @@ abstract class HttpClient {
     }
   }
 
-  Future<Response> put(
+  Future<dynamic> put(
       {Map<String, Object>? query, Map<String, Object?>? map}) async {
     try {
       final Response response =
