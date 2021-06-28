@@ -5,20 +5,24 @@ import '../../themes/app_theme.dart';
 import 'enterprise_detail_controller.dart';
 import 'widgets/widgets.dart';
 
-class EnterpriseDetailView extends GetView<EnterpriseDetailController> with MixinTheme {
+class EnterpriseDetailView extends GetView<EnterpriseDetailController>
+    with MixinTheme {
   const EnterpriseDetailView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: theme.colors.background,
       appBar: CustomAppBarWidget(title: controller.enterprise.enterpriseName),
       body: ListView(
+        physics: const BouncingScrollPhysics(),
         children: [
           ListTileEnterpriseWidget.noOnTap(enterprise: controller.enterprise),
           const SizedBox(height: 8),
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Text(controller.enterprise.description, style: theme.fonts.headline7Black),
+            child: Text(controller.enterprise.description,
+                style: theme.fonts.headline7Black),
           ),
         ],
       ),

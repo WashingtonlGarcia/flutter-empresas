@@ -7,7 +7,7 @@ class CustomAppBarWidget extends PreferredSize {
   CustomAppBarWidget({required String title})
       : super(
             child: AppBar(
-              backgroundColor: Colors.transparent,
+              backgroundColor: DefaultAppTheme().colors.background,
               centerTitle: true,
               leading: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
