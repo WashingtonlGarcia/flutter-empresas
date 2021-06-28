@@ -53,7 +53,7 @@ class HomeView extends GetView<HomeController> with MixinTheme {
                     );
                   }
                   return ListTileEnterpriseWidget(
-                      enterprise: enterprises[index - 1], onTap: () => Get.toNamed(AppRouteName.companyDetail, arguments: enterprises[index - 1]));
+                      enterprise: enterprises[index - 1], onTap: () => Get.toNamed(AppRouteName.enterpriseDetail, arguments: enterprises[index - 1]));
                 }),
           ),
         ),

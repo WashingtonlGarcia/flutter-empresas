@@ -19,7 +19,12 @@ class AppRoutes {
 
   static Route onGenereteRoute(RouteSettings settings) {
     switch (settings.name) {
-      case AppRouteName.companyDetail:
+      case AppRouteName.enterpriseDetail:
+        return _route(
+            settings: settings,
+            view: const EnterpriseDetailView(),
+            binding: EnterpriseDetailBinding(),
+            routeName: AppRouteName.enterpriseDetail);
       case AppRouteName.home:
         return _route(
             settings: settings,
