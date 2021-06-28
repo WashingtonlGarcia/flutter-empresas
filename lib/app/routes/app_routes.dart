@@ -21,13 +21,18 @@ class AppRoutes {
     switch (settings.name) {
       case AppRouteName.companyDetail:
       case AppRouteName.home:
+        return _route(
+            settings: settings,
+            view: const HomeView(),
+            binding: HomeBinding(),
+            routeName: AppRouteName.home);
       case AppRouteName.login:
       default:
         return _route(
             routeName: AppRouteName.login,
             binding: LoginBinding(),
             settings: settings,
-            view: LoginView());
+            view: const LoginView());
     }
   }
 }

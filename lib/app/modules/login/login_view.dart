@@ -6,7 +6,7 @@ import 'login_controller.dart';
 import 'widgets/widgets.dart';
 
 class LoginView extends GetView<LoginController> with MixinTheme {
-  LoginView({Key? key}) : super(key: key);
+  const LoginView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
